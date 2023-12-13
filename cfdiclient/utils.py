@@ -42,7 +42,7 @@ class Utils():
         self.read_xml(self.xml_name)
 
     def read_xml(self, xml_name: str) -> etree.Element:
-        """Gets the xml file and returns the root element
+        """Gets the xml file and returns the XML root element
         
         Args:
             xml_name (str): name of the xml file
@@ -54,7 +54,7 @@ class Utils():
         return self.element_root
 
     def get_element(self, xpath: str) -> etree.Element:
-        """Returns the element from the root element
+        """Returns the XML element from the XML root element
         
         Returns:
             element (etree.Element): Element from the root element
@@ -63,7 +63,7 @@ class Utils():
         return self.element_root.find(xpath, self.internal_nsmap)
 
     def get_element_external(self, element: etree.Element, xpath: str) -> etree.Element:
-        """Returns the external element from the root element
+        """Returns the external XML element from the XML root element
         
         Returns:
             element (etree.Element): External element from the root element

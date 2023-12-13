@@ -22,8 +22,8 @@ PATH = 'certificados/'
 cer_der = open(os.path.join(PATH, FIEL_CER), 'rb').read()
 key_der = open(os.path.join(PATH, FIEL_KEY), 'rb').read()
 
-FECHA_INICIAL = datetime.date(2020, 1, 1)
-FECHA_FINAL = datetime.date(2020, 6, 24)
+FECHA_INICIAL = datetime.date(2023, 1, 1)
+FECHA_FINAL = datetime.date(2023, 6, 24)
 
 fiel = Fiel(cer_der, key_der, FIEL_PAS)
 
@@ -35,6 +35,8 @@ print('TOKEN: ', token)
 
 descarga = SolicitaDescarga(fiel)
 
+print(descarga)
+"""
 # EMITIDOS
 # solicitud = descarga.solicitar_descarga(
 #     token, RFC, FECHA_INICIAL, FECHA_FINAL, rfc_emisor=RFC, tipo_solicitud='CFDI'
@@ -99,3 +101,4 @@ while True:
                 fp.write(base64.b64decode(descarga['paquete_b64']))
         
         break
+"""
